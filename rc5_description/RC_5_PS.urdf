@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<robot name="RC 5 PS">
+  <!-- Base Link -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Joint 0: Fixed connection to Link0 -->
+  <joint name="joint0" type="revolute">
+    <parent link="base_link"/>
+    <child link="link0"/>
+    <origin xyz="0 0 0.1725" rpy="1.5708 0 0"/> <!-- d1=0.1725, alpha=π/2 -->
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="2.0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Link 0 -->
+  <link name="link0">
+    <inertial>
+      <origin xyz="-0.00019409 -0.02779038 0.00595929" rpy="-1.5708 0 0"/>
+      <mass value="4.82600479"/>
+      <inertia ixx="0.01070724" ixy="-0.00006759" ixz="-0.00000871"
+              iyy="0.00907537" iyz="0.00081924"
+              izz="0.00996983"/>
+    </inertial>
+  </link>
+
+  <!-- Joint 1: Revolute -->
+  <joint name="joint1" type="revolute">
+    <parent link="link0"/>
+    <child link="link1"/>
+    <origin xyz="-0.405 0 0.156" rpy="0 0 0"/> <!-- a2=-0.405, d2=0.156 -->
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="2.0"/>
+  </joint>
+
+  <!-- Link 1 -->
+  <link name="link1">
+    <inertial>
+      <origin xyz="0.20250821 0.00001798 -0.02413996" rpy="0 0 0"/>
+      <mass value="11.10382927"/>
+      <inertia ixx="0.02403053" ixy="0.00035076" ixz="0.00000220"
+              iyy="0.41007610" iyz="0.00000531"
+              izz="0.40581383"/>
+    </inertial>
+  </link>
+
+  <!-- Joint 2: Revolute -->
+  <joint name="joint2" type="revolute">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="-0.3722 0 -0.1485" rpy="0 0 0"/> <!-- a3=-0.3722, d3=-0.1485 -->
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="2.0"/>
+  </joint>
+
+  <!-- Link 2 -->
+  <link name="link2">
+    <inertial>
+      <origin xyz="0.13039638 0.00011948 0.02366635" rpy="0 0 0"/>
+      <mass value="4.57367289"/>
+      <inertia ixx="0.00825994" ixy="-0.00004403" ixz="-0.00475038"
+              iyy="0.11580371" iyz="-0.00001780"
+              izz="0.11358420"/>
+    </inertial>
+  </link>
+
+  <!-- Joint 3: Revolute -->
+  <joint name="joint3" type="revolute">
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin xyz="0 0 0.1398" rpy="1.5708 0 0"/> <!-- d4=0.1398, alpha=π/2 -->
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="50" velocity="1.5"/>
+  </joint>
+
+  <!-- Link 3 -->
+  <link name="link3">
+    <inertial>
+      <origin xyz="0.00017970 -0.00433297 0.03407774" rpy="0 0 0"/>
+      <mass value="2.44096949"/>
+      <inertia ixx="0.00416357" ixy="-0.00000442" ixz="-0.00002537"
+              iyy="0.00394647" iyz="0.00037030"
+              izz="0.00252766"/>
+    </inertial>
+  </link>
+
+  <!-- Joint 4: Revolute -->
+  <joint name="joint4" type="revolute">
+    <parent link="link3"/>
+    <child link="link4"/>
+    <origin xyz="0 0 0.1398" rpy="-1.5708 0 0"/> <!-- d5=0.1398, alpha=-π/2 -->
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="50" velocity="1.5"/>
+  </joint>
+
+  <!-- Link 4 -->
+  <link name="link4">
+    <inertial>
+      <origin xyz="-0.00015337 0.00433297 0.03410407" rpy="0 0 0"/>
+      <mass value="2.44096949"/>
+      <inertia ixx="0.00416402" ixy="-0.00000129" ixz="0.00002319"
+              iyy="0.00394211" iyz="-0.00036717"
+              izz="0.00252285"/>
+    </inertial>
+  </link>
+
+  <!-- Joint 5: Revolute -->
+  <joint name="joint5" type="revolute">
+    <parent link="link4"/>
+    <child link="link5"/>
+    <origin xyz="0 0 0.1398" rpy="0 0 0"/> <!-- d6=0.1398 -->
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="30" velocity="1.0"/>
+  </joint>
+
+  <!-- Link 5 (End-Effector) -->
+  <link name="link5">
+    <inertial>
+      <origin xyz="0.00000000 -0.00098373 -0.02806058" rpy="0 0 0"/>
+      <mass value="0.51167316"/>
+      <inertia ixx="0.00047072" ixy="0.00000000" ixz="0.00000000"
+              iyy="0.00048361" iyz="0.00000197"
+              izz="0.00064554"/>
+    </inertial>
+  </link>
+</robot>

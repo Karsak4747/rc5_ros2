@@ -7,6 +7,29 @@
       <mass value="0.1"/>
       <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
     </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/base_link.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/base_link.stl" />
+      </geometry>
+    </collision>
   </link>
 
   <!-- Joint 0: Fixed connection to Link0 -->
@@ -27,6 +50,29 @@
               iyy="0.00907537" iyz="0.00081924"
               izz="0.00996983"/>
     </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link0.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link0.stl" />
+      </geometry>
+    </collision>
   </link>
 
   <!-- Joint 1: Revolute -->
@@ -47,6 +93,29 @@
               iyy="0.41007610" iyz="0.00000531"
               izz="0.40581383"/>
     </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link1.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link1.stl" />
+      </geometry>
+    </collision>
   </link>
 
   <!-- Joint 2: Revolute -->
@@ -67,6 +136,29 @@
               iyy="0.11580371" iyz="-0.00001780"
               izz="0.11358420"/>
     </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link2.stl" />
+      </geometry>
+    </collision>
   </link>
 
   <!-- Joint 3: Revolute -->
@@ -87,6 +179,29 @@
               iyy="0.00394647" iyz="0.00037030"
               izz="0.00252766"/>
     </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link3.stl" />
+      </geometry>
+    </collision>
   </link>
 
   <!-- Joint 4: Revolute -->
@@ -107,6 +222,29 @@
               iyy="0.00394211" iyz="-0.00036717"
               izz="0.00252285"/>
     </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link4.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link4.stl" />
+      </geometry>
+    </collision>
   </link>
 
   <!-- Joint 5: Revolute -->
@@ -127,5 +265,28 @@
               iyy="0.00048361" iyz="0.00000197"
               izz="0.00064554"/>
     </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link5.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rc5_description/meshes/link5.stl" />
+      </geometry>
+    </collision>
   </link>
 </robot>
